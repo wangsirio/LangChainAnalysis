@@ -1,20 +1,7 @@
 import json
 from datetime import datetime
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
-
-chinese_fonts = ['SimHei']
-font_found = False
-for font_name in chinese_fonts:
-    try:
-        plt.rcParams['font.sans-serif'] = [font_name]
-        fm.findfont(font_name)
-        font_found = True
-        break
-    except:
-        continue
-
-
+plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
 
 def read_json_file(file_path):
@@ -102,4 +89,3 @@ if json_data is not None:
     
     plt.tight_layout()
     fig2.savefig('commits_by_date.png', dpi=300, bbox_inches='tight')
-    plt.show()

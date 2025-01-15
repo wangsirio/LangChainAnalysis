@@ -1,0 +1,3 @@
+对LangChain库进行分析，使用REST api获取了LangChain库issue commit pullRequests的数据并进行了可视化
+
+仓库中的数据格式有错误，如需运行请重新运行以获取数据
