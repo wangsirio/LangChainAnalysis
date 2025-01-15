@@ -9,16 +9,16 @@ history=[]
 flag=1
 i=0
 url = "https://api.github.com/repos/langchain-ai/langchain/issues"
-while(flag):
+while flag :
     params = {'per_page': '100',
-              'page': {i}}
+              'page': {i},
+              'state': 'all'}
     response = requests.get(url,verify = False,headers=headers,params = params)
     if response.status_code == 200:
         issues = response.json()
-        print(issues)
         if len(issues) == 0:
             break
-        history.append(issues)
+        history.extend(issues)
         print(f'page {i} finished')
         i = i + 1
     else:
