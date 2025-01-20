@@ -18,7 +18,7 @@ def read_json_file(file_path):
         # 如果读取失败，打印错误信息
         print(e)
 
-# 指定 JSON 文件的路径
+# 指定已保存的JSON 文件的路径
 file_path = './commits.json'
 # 调用函数读取 JSON 文件
 json_data = read_json_file(file_path)
