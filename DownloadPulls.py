@@ -25,5 +25,5 @@ while flag:
         flag=0
         print(f"Failed to retrieve pulls: {response.text}")
 
-with open(f'./pullRequests','w',encoding = 'utf-8')as file:
+with open(f'./pullRequests.json','w',encoding = 'utf-8')as file:
     json.dump(history,file, ensure_ascii=False, indent=4)

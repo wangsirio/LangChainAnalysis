@@ -22,22 +22,12 @@
    - 柱状图和折线图展示数据统计。
    - 关键词词云展示提交信息的核心内容。
 ## 使用方法
-
-### 1. 环境准备
-
-- 安装依赖：
-  ```bash
-  pip install -r requirements.txt
-
-
+   - 运行main.py。
 ## 项目结构
 
 ```text
 LangChainAnalysis
 ├── .gitignore                 # 忽略文件
-├── commits.json               # 保存的 commits 数据
-├── issues                     # 保存的 issues 数据
-├── pullRequests               # 保存的 pull requests 数据
 ├── DealCommits.py             # 处理 commits 数据的脚本
 ├── DealIssues.py              # 处理 issues 数据的脚本
 ├── DealPulls.py               # 处理 pull requests 数据的脚本
@@ -46,4 +36,5 @@ LangChainAnalysis
 ├── DownloadPulls.py           # 下载 pull requests 数据的脚本
 ├── commits_High_frequency_word_analysis.py # 提取关键词的脚本
 ├── README.md                  # 项目说明文档
+├── main.py                  # 主文件，直接运行即可
 ├── 图片文件                   # 自动生成的图表

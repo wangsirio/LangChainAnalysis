@@ -15,7 +15,7 @@ def read_json_file(path):
         print(e)
 
 
-file_path = './issues'
+file_path = './issues.json'
 json_data = read_json_file(file_path)
 if json_data is not None:
     daily_open_issues = {}
@@ -68,4 +68,3 @@ if json_data is not None:
     plt.setp(ax2.get_xticklabels(), rotation=45, ha='right')
     plt.tight_layout()
     fig2.savefig('daily_new_issues.png', dpi=300, bbox_inches='tight')
-    plt.show()

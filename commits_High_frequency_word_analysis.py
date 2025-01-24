@@ -54,7 +54,6 @@ def plot_top_keywords(top_keywords):
     plt.title('Top 20 Keywords in Commit Messages')
     plt.xticks(rotation=90)
     plt.savefig('./commits_Top20_Keywords', dpi=300, bbox_inches='tight')
-    plt.show()
 
 
 # 绘制柱状图
@@ -68,7 +67,6 @@ def generate_wordcloud(word_freq):
     plt.axis('off')
     plt.title('Word Cloud of Commit Messages')
     plt.savefig('./commits_Word_Cloud', dpi=300, bbox_inches='tight')
-    plt.show()
     
 
 # 绘制词云
