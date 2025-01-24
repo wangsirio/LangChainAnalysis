@@ -1,6 +1,3 @@
-对LangChain库进行分析，使用REST api获取了LangChain库issue commit pullRequests的数据并进行了可视化
-
-仓库中的数据格式有错误，如需运行请重新运行以获取数据
 # LangChain GitHub 数据分析工具
 
 本项目用于分析 [LangChain](https://github.com/langchain-ai/langchain) GitHub 仓库数据，包括 `Commits`、`Issues` 和 `Pull Requests`，并通过图表进行可视化。
