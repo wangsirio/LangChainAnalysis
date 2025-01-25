@@ -3,9 +3,12 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
+# 设置 matplotlib 的字体和负号显示，以支持中文和负数
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
 
+
+# 读取 JSON 文件的函数
 def read_json_file(path):
     try:
         with open(path, 'r', encoding = 'utf-8') as file:
@@ -15,11 +18,18 @@ def read_json_file(path):
         print(e)
 
 
+# 指定 Issues 数据文件路径
 file_path = './issues.json'
+# 读取 JSON 文件
 json_data = read_json_file(file_path)
+
+
+# 如果成功读取 JSON 数据
 if json_data is not None:
     daily_open_issues = {}
     daily_new_issues = {}
+
+    # 遍历 JSON 数据中的 Issue 记录
     for issue in json_data:
         created_date = datetime.strptime(issue['created_at'], "%Y-%m-%dT%H:%M:%SZ").date()
         closed_date = None
@@ -29,9 +39,13 @@ if json_data is not None:
             daily_new_issues[created_date] += 1
         else:
             daily_new_issues[created_date] = 1
+
+    # 获取所有 Issue 创建日期并排序
     all_dates = sorted(daily_new_issues.keys())
     start_date = min(all_dates)
     end_date = max(all_dates)
+
+    # 生成从起始日期到结束日期的所有日期列表
     current_date = start_date
     date_list = []
     while current_date <= end_date:
